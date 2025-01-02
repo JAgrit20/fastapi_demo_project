@@ -32,14 +32,10 @@ app = FastAPI()
 
 VERIFY_TOKEN = "ssadadsadas"  # Replace with your verify token
 
-@app.get("/webhook")
-async def verify_webhook(hub_mode: str, hub_challenge: str, hub_verify_token: str):
-    if hub_mode == "subscribe" and hub_verify_token == VERIFY_TOKEN:
-        return int(hub_challenge)
-    raise HTTPException(status_code=403, detail="Invalid token")
+@app.get("/dsakfsadofndsfn")
+def simple_endpoint():
+    return {"message": "asidjisufnsd"}
 
-@app.post("/webhook")
-async def handle_webhook(request: Request):
-    payload = await request.json()
-    print("Received webhook payload:", payload)
-    return {"status": "received"}
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to FastAPI!"}
