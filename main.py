@@ -34,7 +34,7 @@ VERIFY_TOKEN = "ssadadsadas"  # Replace with your verify token
 
 @app.get("/dsakfsadofndsfn")
 def simple_endpoint():
-    return {"message": "asidjisufnsd"}
+    return {"asidjisufnsd"}
 
 @app.get("/")
 def read_root():
